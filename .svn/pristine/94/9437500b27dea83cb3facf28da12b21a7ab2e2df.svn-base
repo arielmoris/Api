@@ -1,0 +1,197 @@
+package pt.api;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+import pt.api.bean.Pagination;
+import pt.api.bean.Total;
+import pt.api.player.balance.PlayerBalance;
+import pt.api.player.balance.PlayerBalanceRequest;
+import pt.api.player.balance.PlayerBalanceResponse;
+import pt.api.player.list.PlayerList;
+import pt.api.player.list.PlayerListRequest;
+import pt.api.player.list.PlayerListResponse;
+import pt.api.player.list.PlayerListResult;
+import pt.api.player.logoutplayer.LogoutPlayer;
+import pt.api.player.logoutplayer.LogoutPlayerRequest;
+import pt.api.player.logoutplayer.LogoutPlayerResponse;
+import pt.api.player.logoutplayer.LogoutPlayerResult;
+import pt.api.player.resetfailedlogin.PlayerResetFailedLogin;
+import pt.api.player.resetfailedlogin.PlayerResetFailedLoginRequest;
+import pt.api.player.resetfailedlogin.PlayerResetFailedLoginResponse;
+import pt.api.player.resetfailedlogin.PlayerResetFailedLoginResult;
+import pt.api.player.update.PlayerUpdate;
+import pt.api.player.update.PlayerUpdateRequest;
+import pt.api.player.update.PlayerUpdateResponse;
+import pt.api.player.update.PlayerUpdateResult;
+import pt.api.player.withdraw.PlayerWithdraw;
+import pt.api.player.withdraw.PlayerWithdrawRequest;
+import pt.api.player.withdraw.PlayerWithdrawResponse;
+import pt.api.player.withdraw.PlayerWithdrawResult;
+/**
+ * Tester
+ *
+ */
+public class App 
+{
+	
+    public static void main( String[] args ){
+    	
+    }
+    
+    public void playerBalance() throws Exception{
+    	String baseUrl="http://localhost:7070/";
+    	String entityKey="SDF80sdf";
+    	PlayerBalanceRequest request = new PlayerBalanceRequest();
+    	request.setPlayername("");
+    	PlayerBalanceResponse response = PlayerBalance.call(baseUrl, request, entityKey);
+    	response.getError();
+    }
+    
+    public void playerList() throws Exception{
+    	String baseUrl="http://localhost:7070/";
+    	String entityKey="SDF80sdf";
+    	PlayerListRequest request = new PlayerListRequest();
+    	request.setAdminname("");
+    	request.setKioskname("");
+    	request.setOnline(false);
+    	request.setPage(0);
+    	request.setPerPage(0);
+
+    	PlayerListResponse response = PlayerList.call(baseUrl, request, entityKey);
+    	response.getError();
+    	response.getErrorcode();
+    	
+    	Pagination page = response.getPagination();
+    	page.getCurrentPage();
+    	page.getItemsPerPage();
+    	page.getTotalPages();
+    	
+    	Total total = response.getTotal();
+    	total.getTotalBalance();
+    	total.getTotalBonusBalance();
+    	total.getTotalCount();
+    	
+    	List<PlayerListResult> result =  response.getResult();
+    	for (PlayerListResult data : result){
+    		data.getADMINNAME();
+    		data.getBALANCE();
+    		data.getBONUSBALANCE();
+    		data.getFROZEN();
+    		data.getIP();
+    		data.getKIOSKNAME();
+    		data.getLASTLOGINDATE();
+    		data.getPLAYERNAME();
+    		data.getSIGNUPDATE();
+    		data.getVIPLEVEL();
+    	}
+    }
+    
+    public void logoutPlayer() throws Exception{
+    	String baseUrl="http://localhost:7070/";
+    	String entityKey="SDF80sdf";
+    	LogoutPlayerRequest request = new LogoutPlayerRequest();
+    	request.setPlayername("");
+
+    	LogoutPlayerResponse response = LogoutPlayer.call(baseUrl, request, entityKey);
+    	response.getError();
+    	response.getErrorcode();
+    	
+    	LogoutPlayerResult res = response.getResult();
+    	res.getResult();
+    }
+    
+    public void resetFailedLogin() throws Exception{
+    	String baseUrl="http://localhost:7070/";
+    	String entityKey="SDF80sdf";
+    	PlayerResetFailedLoginRequest request = new PlayerResetFailedLoginRequest();
+    	request.setPlayername("");
+
+    	PlayerResetFailedLoginResponse response = PlayerResetFailedLogin.call(baseUrl, request, entityKey);
+    	response.getError();
+    	response.getErrorcode();
+    	
+    	PlayerResetFailedLoginResult res = response.getResult();
+    	res.getResult();
+    }
+    
+    public void update() throws Exception{
+    	String baseUrl="http://localhost:7070/";
+    	String entityKey="SDF80sdf";
+    	PlayerUpdateRequest request = new PlayerUpdateRequest();
+    	request.setAddress("");
+    	request.setBirthdate("");
+    	request.setCity("");
+    	request.setComments("");
+    	request.setCountrycode("");
+    	request.setCustom02("");
+    	request.setCustom03("");
+    	request.setCustom04("");
+    	request.setCustom05("");
+    	request.setCustom06("");
+    	request.setCustom07("");
+    	request.setCustom08("");
+    	request.setCustom09("");
+    	request.setCustom10("");
+    	request.setCustom11("");
+    	request.setCustom12("");
+    	request.setCustom13("");
+    	request.setCustom14("");
+    	request.setCustom15("");
+    	request.setCustom16("");
+    	request.setCustom17("");
+    	request.setCustom18("");
+    	request.setCustom19("");
+    	request.setCustom20("");
+    	request.setEmail("");
+    	request.setFax("");
+    	request.setFirstname("");
+    	request.setFirstname("");
+    	request.setFrozen(0);
+    	request.setLanguagecode("");
+    	request.setLastname("");
+    	request.setPassword("");
+    	request.setPhone("");
+    	request.setPlayername("");
+    	request.setSex(0);
+    	request.setState("");
+    	request.setTrackingId("");
+    	request.setViplevel(0);
+    	request.setZip("");
+
+    	PlayerUpdateResponse response = PlayerUpdate.call(baseUrl, request, entityKey);
+    	response.getError();
+    	response.getErrorcode();
+    	
+    	PlayerUpdateResult res = response.getResult();
+    	res.getResult();
+    }
+    
+    
+    public void withdraw() throws Exception{
+    	String baseUrl="http://localhost:7070/";
+    	String entityKey="SDF80sdf";
+    	PlayerWithdrawRequest request = new PlayerWithdrawRequest();
+    	request.setAdminname("");
+    	request.setAmount(BigDecimal.ZERO);
+    	request.setExternaltranid("");
+    	request.setIsForce("");
+    	request.setLosebonus(false);
+    	request.setPlayername("");
+    	
+    	PlayerWithdrawResponse response = PlayerWithdraw.call(baseUrl, request, entityKey);
+    	response.getError();
+    	response.getErrorcode();
+    	
+    	PlayerWithdrawResult res = response.getResult();
+    	res.getAmount();
+    	res.getCurrentplayerbalance();
+    	res.getExecutiontime();
+    	res.getExternaltransactionid();
+    	res.getInstantcashtype();
+    	res.getKiosktransactionid();
+    	res.getKiosktransactiontime();
+    	res.getPtinternaltransactionid();
+    	res.getResult();
+    }
+}

@@ -1,0 +1,20 @@
+package pt.api.player.update;
+
+import pt.api.bean.MethodBase;
+
+public class Update extends MethodBase{
+	
+	
+	private static String uri = "player/update/";
+	
+	public static final Response call(String baseUrl, Request request) throws Exception{
+		uri = baseUrl+uri;
+		uri = generateUri(request, uri);
+		
+		Response response = new Response();
+		response = processSend(response, uri);
+		
+		return response;
+	}
+			
+}

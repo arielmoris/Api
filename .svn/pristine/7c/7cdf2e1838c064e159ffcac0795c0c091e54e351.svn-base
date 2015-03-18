@@ -1,0 +1,71 @@
+package pt.api.util;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.HttpClientBuilder;
+
+import pt.api.bean.ResponseWrapper;
+
+public class HttpUtil {
+	public static ResponseWrapper sendPost(String url){
+		Logger logger = new Logger();
+		logger.Log_Data("Sending post request to "+url);
+
+		ResponseWrapper response = new ResponseWrapper();
+		int code = Constants.ResponseCode.SUCCESS;
+		String message = "Success";
+		String obj = "{\"result\":{\"CASINONAME\":\"playtech\",\"PLAYERNAME\":\"BEZ_PLAYER1\",\"ADDRESS\":\"str amosova 12\",\"BIRTHDATE\":\"1952-01-01\",\"CITY\":\"NA\",\"COUNTRYCODE\":\"UA\",\"CURRENCY\":\"USD\",\"MARKO LABEL 2\":\"pwd\",\"EMAIL\":\"yevgeniy.bezpaluy@playtech.com\",\"FAX\":\"11111\",\"FIRSTNAME\":\"TEST_11\",\"LASTNAME\":\"TEST_22\",\"NOBONUS\":\"0\",\"OCCUPATION\":\"NA\",\"PHONE\":\"11111222\",\"SEX\":\"M\",\"STATE\":\"NA\",\"VIPLEVEL\":\"3\",\"WANTMAIL\":\"1\",\"ZIP\":\"NA\", \"ADVERTISER\":\"default4f\",\"BANNERID\":\"-\",\"CLIENTTYPE\":\"landbasedcasino\",\"CREFERER\":\"null;null;null;null;null;null;null;null\",\"LANGUAGECODE\":\"AR\",\"SERIAL\":\"TCW20CARDUSER49831\",\"SIGNUPDATE\":\"2014-01-17 09:48:41.000\",\"SIGNUPCLIENTVERSION\":\"-\",\"PASSWORD\":\"4F643CAD255A968078605B4470AFB2A2CA61D658\",\"FROZEN\":\"0\",\"CLIENTSKIN\":\"playtech\",\"SIGNUPCLIENTPLATFORM\":\"download\",\"INTERNAL\":\"0\",\"SUSPENDED\":\"0\",\"FULLFIRSTNAME\":null,\"FULLFIRSTSURNAME\":null, \"FULLSECONDSURNAME\":null,\"TAXRESIDENCEREGION\":null,\"CODE\":\"4525181\",\"BALANCE\":\"68\",\"MAXBALANCE\":\"118\",\"RESERVEDBALANCE\":\"0\",\"CURRENTBET\":\"0\",\"CURRENTBONUSBET\":\"0\",\"PENDINGBONUSBALANCE\":\"0\",\"BONUSBALANCE\":\"20\", \"COMPPOINTS\":\"0\",\"TOTALCOMPPOINTS\":\"0\",\"KIOSKCODE\":\"207241\",\"KIOSKADMINCODE\":\"706781\",\"CASINOCODE\":\"86\",\"LOCKEDMINUTES\":null,\"CURRENCYCODE\":0,\"CASINONICKNAME\":0,\"NETWORKNICKNAMES\":[{\"networkId\":\"4600\",\"networkData\":[{\"key\":1,\"value\":null},{\"key\":2,\"value\":\"casino\"}]}],\"ISINGAME\":0,\"KIOSKNAME\":\"bez_kiosk1\",\"KIOSKADMINNAME\":\"bez1\",\"3RDPData\":{\"custom01\":\"custom01 field value\",\"custom02\":\"custom02 field value\",\"custom03\":\"custom03 field value\"}}}";
+		String encodedUrl = url ;
+		
+		try {
+			encodedUrl = URLEncoder.encode(url, "UTF-8");
+		} catch (UnsupportedEncodingException e1) {
+			e1.printStackTrace();
+		}
+		
+		HttpClient httpClient = HttpClientBuilder.create().build();
+		HttpPost post = new HttpPost(encodedUrl);
+		try {
+			HttpResponse httpResponse = httpClient.execute(post);
+			obj = "";
+			if(httpResponse.getStatusLine().getStatusCode() == 200){
+				BufferedReader br = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent()));
+
+				StringBuffer strBuffer = new StringBuffer();
+				char[] cBuff = new char[1];
+
+				while((br.read(cBuff, 0, 1)) != -1){
+					strBuffer.append(cBuff[0]);
+				}
+				obj = strBuffer.toString();
+				if(obj == null || obj.equals("")){ 
+					code = Constants.ResponseCode.FAILED;
+					message = "No response.";
+				}
+			}else{
+				code	 = httpResponse.getStatusLine().getStatusCode();
+				message	 = httpResponse.getStatusLine().getReasonPhrase();
+			}
+		} catch (Exception e) {
+			logger.Log_Error(e);
+			code = Constants.ResponseCode.SUCCESS;
+			message = "Try again later.";
+		} finally{
+			post.releaseConnection();
+			httpClient.getConnectionManager().shutdown();
+		}
+		
+		response.setCode(code);
+		response.setMessage(message);
+		response.setObj(obj);
+		
+		logger.Log_Data("Leaving sendPost :"+response.toString());
+		return response;
+	}
+}

@@ -1,0 +1,21 @@
+package pt.api.player.balance;
+
+import pt.api.bean.MethodBase;
+
+public class Balance extends MethodBase{
+	private static String uri = "player/balance/";
+	
+	public static final Response call(String baseUrl, Request request) throws Exception{
+		
+		uri = baseUrl+uri;
+		uri = generateUri(request, uri);
+		
+		Response response = new Response();
+		response = processSend(response, uri);
+		
+		return response;
+	}
+	
+
+
+}

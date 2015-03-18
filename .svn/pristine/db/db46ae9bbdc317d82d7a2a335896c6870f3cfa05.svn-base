@@ -1,0 +1,17 @@
+package pt.api.player.balance;
+
+import java.util.List;
+
+import pt.api.bean.ResponseBase;
+
+public class Response extends ResponseBase{
+	private Result result;
+	
+	public Result getResult() {
+		return result;
+	}
+	public void setResult(Result result) {
+		this.result = result;
+	}
+	
+}

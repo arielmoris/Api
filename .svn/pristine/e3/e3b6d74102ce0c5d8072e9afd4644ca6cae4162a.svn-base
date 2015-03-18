@@ -1,0 +1,4 @@
+#Set reloadable to true to enable auto-reload
+reloadable=true
+
+pt.baseurl=http://localhost:7070/

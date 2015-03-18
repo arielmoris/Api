@@ -1,0 +1,21 @@
+package pt.api.player.deposit;
+
+import pt.api.bean.ResponseBase;
+
+public class PlayerDepositResponse extends ResponseBase{
+	private PlayerDepositResult result;
+
+	public PlayerDepositResult getResult() {
+		return result;
+	}
+
+	public void setResult(PlayerDepositResult result) {
+		this.result = result;
+	}
+
+	@Override
+	public String toString() {
+		return "Response [result=" + result + "]";
+	}
+	
+}

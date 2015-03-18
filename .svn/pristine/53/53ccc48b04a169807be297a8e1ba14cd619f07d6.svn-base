@@ -1,0 +1,22 @@
+package pt.api.player.info;
+
+import java.util.List;
+
+public class NetworkNickname {
+	
+	private Integer networkId;
+	private List<NetworkData> networkData;
+	
+	public Integer getNetworkId() {
+		return networkId;
+	}
+	public void setNetworkId(Integer networkId) {
+		this.networkId = networkId;
+	}
+	public List<NetworkData> getNetworkData() {
+		return networkData;
+	}
+	public void setNetworkData(List<NetworkData> networkData) {
+		this.networkData = networkData;
+	}
+}

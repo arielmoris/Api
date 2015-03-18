@@ -1,0 +1,34 @@
+package pt.api.player.update;
+
+
+public class Response {
+	
+	private int errorcode;
+	private String error;
+	private Result result;
+	public int getErrorcode() {
+		return errorcode;
+	}
+	public void setErrorcode(int errorcode) {
+		this.errorcode = errorcode;
+	}
+	public String getError() {
+		return error;
+	}
+	public void setError(String error) {
+		this.error = error;
+	}
+	public Result getResult() {
+		return result;
+	}
+	public void setResult(Result result) {
+		this.result = result;
+	}
+	
+	@Override
+	public String toString() {
+		return "Response [errorcode=" + errorcode + ", error=" + error
+				+ ", result=" + result + "]";
+	}
+	
+}

@@ -1,0 +1,15 @@
+package pt.api.player.balance;
+
+public class Request {
+	private String playername;
+
+	public String getPlayername() {
+		return playername;
+	}
+
+	public void setPlayername(String playername) {
+		this.playername = playername;
+	}
+
+
+}

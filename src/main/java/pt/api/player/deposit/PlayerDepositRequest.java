@@ -1,0 +1,34 @@
+package pt.api.player.deposit;
+
+import pt.api.bean.RequestBase;
+
+public class PlayerDepositRequest extends RequestBase{
+	private String playername;
+	private String amount;
+	private String adminname;
+	private String externaltranid;
+	public String getPlayername() {
+		return playername;
+	}
+	public void setPlayername(String playername) {
+		this.playername = playername;
+	}
+	public String getAmount() {
+		return amount;
+	}
+	public void setAmount(String amount) {
+		this.amount = amount;
+	}
+	public String getAdminname() {
+		return adminname;
+	}
+	public void setAdminname(String adminname) {
+		this.adminname = adminname;
+	}
+	public String getExternaltranid() {
+		return externaltranid;
+	}
+	public void setExternaltranid(String externaltranid) {
+		this.externaltranid = externaltranid;
+	}
+}

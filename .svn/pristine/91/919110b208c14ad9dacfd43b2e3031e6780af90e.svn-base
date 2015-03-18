@@ -1,0 +1,15 @@
+package pt.api.player.checktransaction;
+
+import pt.api.bean.ResponseBase;
+
+public class Response extends ResponseBase{
+	private Result result;
+
+	public Result getResult() {
+		return result;
+	}
+
+	public void setResult(Result result) {
+		this.result = result;
+	}
+}

@@ -1,0 +1,24 @@
+package pt.api;
+
+import pt.api.player.info.Info;
+import pt.api.player.info.Request;
+import pt.api.player.info.Response;
+
+/**
+ * Tester
+ *
+ */
+public class App 
+{
+    public static void main( String[] args ){
+    	Request request = new Request();
+    	request.setPlayername("ariel");
+    	
+        try {
+			Response response = Info.call("http://localhost:7070/", request);
+			System.out.println(response.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+    }
+}

@@ -1,0 +1,24 @@
+package pt.api;
+
+import pt.api.player.update.PlayerUpdateRequest;
+import pt.api.player.update.PlayerUpdateResponse;
+import pt.api.player.update.PlayerUpdate;
+/**
+ * Tester
+ *
+ */
+public class App 
+{
+    public static void main( String[] args ){
+    	PlayerUpdateRequest request = new PlayerUpdateRequest();
+    	request.setPlayername("ariel");
+    	
+        try {
+			PlayerUpdateResponse response = PlayerUpdate.call("http://localhost:7070/", request);
+			System.out.println(response.toString());
+			response.getResult().getResult();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+    }
+}

@@ -1,0 +1,26 @@
+package pt.api;
+
+import java.util.Date;
+
+import pt.api.player.update.Request;
+import pt.api.player.update.Response;
+import pt.api.player.update.Update;
+
+/**
+ * Tester
+ *
+ */
+public class App 
+{
+    public static void main( String[] args ){
+    	Request request = new Request();
+    	request.setPlayername("ariel");
+        try {
+			Response response = Update.call(request);
+			System.out.println(response.getError()+"=>"+response.getErrorcode());
+			System.out.println(response.getResult().getResult());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+    }
+}

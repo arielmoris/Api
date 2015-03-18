@@ -1,0 +1,29 @@
+package pt.api.player.create;
+
+import java.util.List;
+
+public class Response {
+	private String error;
+	private Integer errorcode;
+	private List<Result> result;
+	public String getError() {
+		return error;
+	}
+	public void setError(String error) {
+		this.error = error;
+	}
+	public Integer getErrorcode() {
+		return errorcode;
+	}
+	public void setErrorcode(Integer errorcode) {
+		this.errorcode = errorcode;
+	}
+	public List<Result> getResult() {
+		return result;
+	}
+	public void setResult(List<Result> result) {
+		this.result = result;
+	}
+	
+	
+}

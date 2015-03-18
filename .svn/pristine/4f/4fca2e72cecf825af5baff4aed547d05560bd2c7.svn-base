@@ -1,0 +1,19 @@
+package pt.api.player.update;
+
+import java.util.List;
+
+import pt.api.bean.ResponseBase;
+
+
+public class Response extends ResponseBase{
+	
+	private List<Result> result;
+
+	public List<Result> getResult() {
+		return result;
+	}
+	public void setResult(List<Result> result) {
+		this.result = result;
+	}
+	
+}

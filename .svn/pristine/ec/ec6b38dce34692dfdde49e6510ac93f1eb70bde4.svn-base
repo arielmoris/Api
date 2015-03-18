@@ -1,0 +1,5 @@
+package pt.api.player.info;
+
+public class Response {
+
+}

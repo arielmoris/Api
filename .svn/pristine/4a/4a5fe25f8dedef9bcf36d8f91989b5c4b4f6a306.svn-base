@@ -1,0 +1,460 @@
+package pt.api.player.info;
+
+import java.math.BigDecimal;
+import java.util.Date;
+import java.util.List;
+
+public class Result {
+	private String CASINONAME;
+	private String PLAYERNAME;
+	private String ADDRESS;
+	private Date BIRTHDATE;
+	private String CITY;
+	private String COUNTRYCODE;
+	private String CURRENCY;
+	private String EMAIL;
+	private String FAX;
+	private String FIRSTNAME;
+	private String LASTNAME;
+	private String NOBONUS;
+	private String OCCUPATION;
+	private String PHONE;
+	private String SEX;
+	private String STATE;
+	private String VIPLEVEL;
+	private String WANTMAIL;
+	private String ZIP;
+	private String ADVERTISER;
+	private String BANNERID;
+	private String CLIENTTYPE;
+	private String CREFERER;
+	private String TRACKINGID;
+	private String LANGUAGECODE;
+	private String SERIAL;
+	private Date SIGNUPDATE;
+	private String SIGNUPCLIENTVERSION;
+	private String PASSWORD;
+	private String FROZEN;
+	private String CLIENTSKIN;
+	private String SIGNUPCLIENTPLATFORM;
+	private Integer INTERNAL;
+	private String SUSPENDED;
+	private String FULLFIRSTNAME;
+	private String FULLFIRSTSURNAME;
+	private String FULLSECONDSURNAME;
+	private String TAXRESIDENCEREGION;
+	private Integer CODE;
+	private BigDecimal BALANCE;
+	private BigDecimal MAXBALANCE;
+	private BigDecimal RESERVEDBALANCE;
+	private Integer CURRENTBET;
+	private Integer CURRENTBONUSBET;
+	private Integer PENDINGBONUSBALANCE;
+	private BigDecimal BONUSBALANCE;
+	private Integer COMPPOINTS;
+	private Integer TOTALCOMPPOINTS;
+	private Integer KIOSKCODE;
+	private Integer KIOSKADMINCODE;
+	private Integer CASINOCODE;
+	private String LOCKEDMINUTES;
+	private String CURRENCYCODE;
+	private String CASINONICKNAME;
+	private List<NetworkNickname> NETWORKNICKNAMES;
+	private String ISINGAME;
+	private String KIOSKNAME;
+	private String KIOSKADMINNAME;
+	private _3RDPContainer _3RDPData;
+	
+	public String getCASINONAME() {
+		return CASINONAME;
+	}
+	public void setCASINONAME(String cASINONAME) {
+		CASINONAME = cASINONAME;
+	}
+	public String getPLAYERNAME() {
+		return PLAYERNAME;
+	}
+	public void setPLAYERNAME(String pLAYERNAME) {
+		PLAYERNAME = pLAYERNAME;
+	}
+	public String getADDRESS() {
+		return ADDRESS;
+	}
+	public void setADDRESS(String aDDRESS) {
+		ADDRESS = aDDRESS;
+	}
+	public String getCITY() {
+		return CITY;
+	}
+	public Date getBIRTHDATE() {
+		return BIRTHDATE;
+	}
+	public void setBIRTHDATE(Date bIRTHDATE) {
+		BIRTHDATE = bIRTHDATE;
+	}
+	public void setCITY(String cITY) {
+		CITY = cITY;
+	}
+	public String getCOUNTRYCODE() {
+		return COUNTRYCODE;
+	}
+	public void setCOUNTRYCODE(String cOUNTRYCODE) {
+		COUNTRYCODE = cOUNTRYCODE;
+	}
+	public String getCURRENCY() {
+		return CURRENCY;
+	}
+	public void setCURRENCY(String cURRENCY) {
+		CURRENCY = cURRENCY;
+	}
+	public String getEMAIL() {
+		return EMAIL;
+	}
+	public void setEMAIL(String eMAIL) {
+		EMAIL = eMAIL;
+	}
+	public String getFAX() {
+		return FAX;
+	}
+	public void setFAX(String fAX) {
+		FAX = fAX;
+	}
+	public String getFIRSTNAME() {
+		return FIRSTNAME;
+	}
+	public void setFIRSTNAME(String fIRSTNAME) {
+		FIRSTNAME = fIRSTNAME;
+	}
+	public String getLASTNAME() {
+		return LASTNAME;
+	}
+	public void setLASTNAME(String lASTNAME) {
+		LASTNAME = lASTNAME;
+	}
+	public String getNOBONUS() {
+		return NOBONUS;
+	}
+	public void setNOBONUS(String nOBONUS) {
+		NOBONUS = nOBONUS;
+	}
+	public String getOCCUPATION() {
+		return OCCUPATION;
+	}
+	public void setOCCUPATION(String oCCUPATION) {
+		OCCUPATION = oCCUPATION;
+	}
+	public String getPHONE() {
+		return PHONE;
+	}
+	public void setPHONE(String pHONE) {
+		PHONE = pHONE;
+	}
+	public String getSEX() {
+		return SEX;
+	}
+	public void setSEX(String sEX) {
+		SEX = sEX;
+	}
+	public String getSTATE() {
+		return STATE;
+	}
+	public void setSTATE(String sTATE) {
+		STATE = sTATE;
+	}
+	public String getVIPLEVEL() {
+		return VIPLEVEL;
+	}
+	public void setVIPLEVEL(String vIPLEVEL) {
+		VIPLEVEL = vIPLEVEL;
+	}
+	public String getWANTMAIL() {
+		return WANTMAIL;
+	}
+	public void setWANTMAIL(String wANTMAIL) {
+		WANTMAIL = wANTMAIL;
+	}
+	public String getZIP() {
+		return ZIP;
+	}
+	public void setZIP(String zIP) {
+		ZIP = zIP;
+	}
+	public String getADVERTISER() {
+		return ADVERTISER;
+	}
+	public void setADVERTISER(String aDVERTISER) {
+		ADVERTISER = aDVERTISER;
+	}
+	public String getBANNERID() {
+		return BANNERID;
+	}
+	public void setBANNERID(String bANNERID) {
+		BANNERID = bANNERID;
+	}
+	public String getCLIENTTYPE() {
+		return CLIENTTYPE;
+	}
+	public void setCLIENTTYPE(String cLIENTTYPE) {
+		CLIENTTYPE = cLIENTTYPE;
+	}
+	public String getCREFERER() {
+		return CREFERER;
+	}
+	public void setCREFERER(String cREFERER) {
+		CREFERER = cREFERER;
+	}
+	public String getTRACKINGID() {
+		return TRACKINGID;
+	}
+	public void setTRACKINGID(String tRACKINGID) {
+		TRACKINGID = tRACKINGID;
+	}
+	public String getLANGUAGECODE() {
+		return LANGUAGECODE;
+	}
+	public void setLANGUAGECODE(String lANGUAGECODE) {
+		LANGUAGECODE = lANGUAGECODE;
+	}
+	public String getSERIAL() {
+		return SERIAL;
+	}
+	public void setSERIAL(String sERIAL) {
+		SERIAL = sERIAL;
+	}
+	public Date getSIGNUPDATE() {
+		return SIGNUPDATE;
+	}
+	public void setSIGNUPDATE(Date sIGNUPDATE) {
+		SIGNUPDATE = sIGNUPDATE;
+	}
+	public String getSIGNUPCLIENTVERSION() {
+		return SIGNUPCLIENTVERSION;
+	}
+	public void setSIGNUPCLIENTVERSION(String sIGNUPCLIENTVERSION) {
+		SIGNUPCLIENTVERSION = sIGNUPCLIENTVERSION;
+	}
+	public String getPASSWORD() {
+		return PASSWORD;
+	}
+	public void setPASSWORD(String pASSWORD) {
+		PASSWORD = pASSWORD;
+	}
+	public String getFROZEN() {
+		return FROZEN;
+	}
+	public void setFROZEN(String fROZEN) {
+		FROZEN = fROZEN;
+	}
+	public String getCLIENTSKIN() {
+		return CLIENTSKIN;
+	}
+	public void setCLIENTSKIN(String cLIENTSKIN) {
+		CLIENTSKIN = cLIENTSKIN;
+	}
+	public String getSIGNUPCLIENTPLATFORM() {
+		return SIGNUPCLIENTPLATFORM;
+	}
+	public void setSIGNUPCLIENTPLATFORM(String sIGNUPCLIENTPLATFORM) {
+		SIGNUPCLIENTPLATFORM = sIGNUPCLIENTPLATFORM;
+	}
+	public Integer getINTERNAL() {
+		return INTERNAL;
+	}
+	public void setINTERNAL(Integer iNTERNAL) {
+		INTERNAL = iNTERNAL;
+	}
+	public String getSUSPENDED() {
+		return SUSPENDED;
+	}
+	public void setSUSPENDED(String sUSPENDED) {
+		SUSPENDED = sUSPENDED;
+	}
+	public String getFULLFIRSTNAME() {
+		return FULLFIRSTNAME;
+	}
+	public void setFULLFIRSTNAME(String fULLFIRSTNAME) {
+		FULLFIRSTNAME = fULLFIRSTNAME;
+	}
+	public String getFULLFIRSTSURNAME() {
+		return FULLFIRSTSURNAME;
+	}
+	public void setFULLFIRSTSURNAME(String fULLFIRSTSURNAME) {
+		FULLFIRSTSURNAME = fULLFIRSTSURNAME;
+	}
+	public String getFULLSECONDSURNAME() {
+		return FULLSECONDSURNAME;
+	}
+	public void setFULLSECONDSURNAME(String fULLSECONDSURNAME) {
+		FULLSECONDSURNAME = fULLSECONDSURNAME;
+	}
+	public String getTAXRESIDENCEREGION() {
+		return TAXRESIDENCEREGION;
+	}
+	public void setTAXRESIDENCEREGION(String tAXRESIDENCEREGION) {
+		TAXRESIDENCEREGION = tAXRESIDENCEREGION;
+	}
+	public Integer getCODE() {
+		return CODE;
+	}
+	public void setCODE(Integer cODE) {
+		CODE = cODE;
+	}
+	public BigDecimal getBALANCE() {
+		return BALANCE;
+	}
+	public void setBALANCE(BigDecimal bALANCE) {
+		BALANCE = bALANCE;
+	}
+	public BigDecimal getMAXBALANCE() {
+		return MAXBALANCE;
+	}
+	public void setMAXBALANCE(BigDecimal mAXBALANCE) {
+		MAXBALANCE = mAXBALANCE;
+	}
+	public BigDecimal getRESERVEDBALANCE() {
+		return RESERVEDBALANCE;
+	}
+	public void setRESERVEDBALANCE(BigDecimal rESERVEDBALANCE) {
+		RESERVEDBALANCE = rESERVEDBALANCE;
+	}
+	public Integer getCURRENTBET() {
+		return CURRENTBET;
+	}
+	public void setCURRENTBET(Integer cURRENTBET) {
+		CURRENTBET = cURRENTBET;
+	}
+	public Integer getCURRENTBONUSBET() {
+		return CURRENTBONUSBET;
+	}
+	public void setCURRENTBONUSBET(Integer cURRENTBONUSBET) {
+		CURRENTBONUSBET = cURRENTBONUSBET;
+	}
+	public Integer getPENDINGBONUSBALANCE() {
+		return PENDINGBONUSBALANCE;
+	}
+	public void setPENDINGBONUSBALANCE(Integer pENDINGBONUSBALANCE) {
+		PENDINGBONUSBALANCE = pENDINGBONUSBALANCE;
+	}
+	public BigDecimal getBONUSBALANCE() {
+		return BONUSBALANCE;
+	}
+	public void setBONUSBALANCE(BigDecimal bONUSBALANCE) {
+		BONUSBALANCE = bONUSBALANCE;
+	}
+	public Integer getCOMPPOINTS() {
+		return COMPPOINTS;
+	}
+	public void setCOMPPOINTS(Integer cOMPPOINTS) {
+		COMPPOINTS = cOMPPOINTS;
+	}
+	public Integer getTOTALCOMPPOINTS() {
+		return TOTALCOMPPOINTS;
+	}
+	public void setTOTALCOMPPOINTS(Integer tOTALCOMPPOINTS) {
+		TOTALCOMPPOINTS = tOTALCOMPPOINTS;
+	}
+	public Integer getKIOSKCODE() {
+		return KIOSKCODE;
+	}
+	public void setKIOSKCODE(Integer kIOSKCODE) {
+		KIOSKCODE = kIOSKCODE;
+	}
+	public Integer getKIOSKADMINCODE() {
+		return KIOSKADMINCODE;
+	}
+	public void setKIOSKADMINCODE(Integer kIOSKADMINCODE) {
+		KIOSKADMINCODE = kIOSKADMINCODE;
+	}
+	public Integer getCASINOCODE() {
+		return CASINOCODE;
+	}
+	public void setCASINOCODE(Integer cASINOCODE) {
+		CASINOCODE = cASINOCODE;
+	}
+	public String getLOCKEDMINUTES() {
+		return LOCKEDMINUTES;
+	}
+	public void setLOCKEDMINUTES(String lOCKEDMINUTES) {
+		LOCKEDMINUTES = lOCKEDMINUTES;
+	}
+	public String getCURRENCYCODE() {
+		return CURRENCYCODE;
+	}
+	public void setCURRENCYCODE(String cURRENCYCODE) {
+		CURRENCYCODE = cURRENCYCODE;
+	}
+	public String getCASINONICKNAME() {
+		return CASINONICKNAME;
+	}
+	public void setCASINONICKNAME(String cASINONICKNAME) {
+		CASINONICKNAME = cASINONICKNAME;
+	}
+	public List<NetworkNickname> getNETWORKNICKNAMES() {
+		return NETWORKNICKNAMES;
+	}
+	public void setNETWORKNICKNAMES(List<NetworkNickname> nETWORKNICKNAMES) {
+		NETWORKNICKNAMES = nETWORKNICKNAMES;
+	}
+	public String getISINGAME() {
+		return ISINGAME;
+	}
+	public void setISINGAME(String iSINGAME) {
+		ISINGAME = iSINGAME;
+	}
+	public String getKIOSKNAME() {
+		return KIOSKNAME;
+	}
+	public void setKIOSKNAME(String kIOSKNAME) {
+		KIOSKNAME = kIOSKNAME;
+	}
+	public String getKIOSKADMINNAME() {
+		return KIOSKADMINNAME;
+	}
+	public void setKIOSKADMINNAME(String kIOSKADMINNAME) {
+		KIOSKADMINNAME = kIOSKADMINNAME;
+	}
+	public _3RDPContainer get_3RDPData() {
+		return _3RDPData;
+	}
+	public void set_3RDPData(_3RDPContainer _3rdpData) {
+		_3RDPData = _3rdpData;
+	}
+	
+	@Override
+	public String toString() {
+		return "Result [CASINONAME=" + CASINONAME + ", PLAYERNAME="
+				+ PLAYERNAME + ", ADDRESS=" + ADDRESS + ", BIRTHDATE="
+				+ BIRTHDATE + ", CITY=" + CITY + ", COUNTRYCODE=" + COUNTRYCODE
+				+ ", CURRENCY=" + CURRENCY + ", EMAIL=" + EMAIL + ", FAX="
+				+ FAX + ", FIRSTNAME=" + FIRSTNAME + ", LASTNAME=" + LASTNAME
+				+ ", NOBONUS=" + NOBONUS + ", OCCUPATION=" + OCCUPATION
+				+ ", PHONE=" + PHONE + ", SEX=" + SEX + ", STATE=" + STATE
+				+ ", VIPLEVEL=" + VIPLEVEL + ", WANTMAIL=" + WANTMAIL
+				+ ", ZIP=" + ZIP + ", ADVERTISER=" + ADVERTISER + ", BANNERID="
+				+ BANNERID + ", CLIENTTYPE=" + CLIENTTYPE + ", CREFERER="
+				+ CREFERER + ", TRACKINGID=" + TRACKINGID + ", LANGUAGECODE="
+				+ LANGUAGECODE + ", SERIAL=" + SERIAL + ", SIGNUPDATE="
+				+ SIGNUPDATE + ", SIGNUPCLIENTVERSION=" + SIGNUPCLIENTVERSION
+				+ ", PASSWORD=" + PASSWORD + ", FROZEN=" + FROZEN
+				+ ", CLIENTSKIN=" + CLIENTSKIN + ", SIGNUPCLIENTPLATFORM="
+				+ SIGNUPCLIENTPLATFORM + ", INTERNAL=" + INTERNAL
+				+ ", SUSPENDED=" + SUSPENDED + ", FULLFIRSTNAME="
+				+ FULLFIRSTNAME + ", FULLFIRSTSURNAME=" + FULLFIRSTSURNAME
+				+ ", FULLSECONDSURNAME=" + FULLSECONDSURNAME
+				+ ", TAXRESIDENCEREGION=" + TAXRESIDENCEREGION + ", CODE="
+				+ CODE + ", BALANCE=" + BALANCE + ", MAXBALANCE=" + MAXBALANCE
+				+ ", RESERVEDBALANCE=" + RESERVEDBALANCE + ", CURRENTBET="
+				+ CURRENTBET + ", CURRENTBONUSBET=" + CURRENTBONUSBET
+				+ ", PENDINGBONUSBALANCE=" + PENDINGBONUSBALANCE
+				+ ", BONUSBALANCE=" + BONUSBALANCE + ", COMPPOINTS="
+				+ COMPPOINTS + ", TOTALCOMPPOINTS=" + TOTALCOMPPOINTS
+				+ ", KIOSKCODE=" + KIOSKCODE + ", KIOSKADMINCODE="
+				+ KIOSKADMINCODE + ", CASINOCODE=" + CASINOCODE
+				+ ", LOCKEDMINUTES=" + LOCKEDMINUTES + ", CURRENCYCODE="
+				+ CURRENCYCODE + ", CASINONICKNAME=" + CASINONICKNAME
+				+ ", NETWORKNICKNAMES=" + NETWORKNICKNAMES + ", ISINGAME="
+				+ ISINGAME + ", KIOSKNAME=" + KIOSKNAME + ", KIOSKADMINNAME="
+				+ KIOSKADMINNAME + ", _3RDPData=" + _3RDPData + "]";
+	}
+	
+}

@@ -1,0 +1,28 @@
+package pt.api.player.update;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import pt.api.bean.MethodBase;
+
+public class Update extends MethodBase{
+	
+	private static Logger logger = LoggerFactory.getLogger(Update.class);
+	
+	private static String uri = "player/update/";
+	
+	public static final Response call(String baseUrl, Request request) throws Exception{
+		logger.debug("Inside Update Call : {}", request.getPlayername());
+		
+		uri = baseUrl+uri;
+		uri = generateUri(request, uri);
+		
+		Response response = new Response();
+		response = processSend(response, uri);
+		
+		logger.debug("Response : {} ", response);
+		logger.debug("Finished Update Call : {}", request.getPlayername());
+		return response;
+	}
+			
+}

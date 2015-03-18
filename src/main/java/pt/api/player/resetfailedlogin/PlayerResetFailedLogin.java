@@ -1,0 +1,16 @@
+package pt.api.player.resetfailedlogin;
+
+import pt.api.bean.MethodBase;
+
+public class PlayerResetFailedLogin extends MethodBase{
+	private static String uri = "player/resetFailedLogin/";
+
+	public static final PlayerResetFailedLoginResponse call(String baseUrl, PlayerResetFailedLoginRequest request, String entityKey)
+			throws Exception {
+		uri = baseUrl + uri;
+		uri = generateUri(request, uri);
+		PlayerResetFailedLoginResponse response = new PlayerResetFailedLoginResponse();
+		response = processSend(response, uri, entityKey);
+		return response;
+	}
+}

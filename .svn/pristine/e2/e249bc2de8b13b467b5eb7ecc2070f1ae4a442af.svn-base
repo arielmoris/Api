@@ -1,0 +1,21 @@
+package pt.api;
+
+import pt.api.player.Update.Request;
+import pt.api.player.Update.Update;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args ){
+    	Request request = new Request();
+    	request.setPlayername("ariel");
+        try {
+			Update.call(request);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+    }
+}

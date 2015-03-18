@@ -1,0 +1,13 @@
+package pt.api.player.balance;
+
+public class Request {
+	private String balance;
+
+	public String getBalance() {
+		return balance;
+	}
+
+	public void setBalance(String balance) {
+		this.balance = balance;
+	}
+}

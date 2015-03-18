@@ -1,0 +1,25 @@
+package pt.api;
+
+import java.util.Date;
+
+import pt.api.player.update.Request;
+import pt.api.player.update.Response;
+import pt.api.player.update.Update;
+
+/**
+ * Tester
+ *
+ */
+public class App 
+{
+    public static void main( String[] args ){
+    	Request request = new Request();
+    	request.setPlayername("ariel");
+    	request.setBirthdate(new Date().toString());
+        try {
+			Response response = Update.call("http://localhost:7070/", request);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+    }
+}

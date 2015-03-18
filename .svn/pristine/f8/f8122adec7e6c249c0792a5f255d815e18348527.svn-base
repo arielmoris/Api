@@ -1,0 +1,18 @@
+package pt.api.player.checktransaction;
+
+import pt.api.bean.MethodBase;
+
+public class CheckTransaction extends MethodBase{
+	private static String uri = "player/checktransaction/";
+	
+	public static final Response call(String baseUrl, Request request) throws Exception{
+		
+		uri = baseUrl+uri;
+		uri = generateUri(request, uri);
+		
+		Response response = new Response();
+		response = processSend(response, uri);
+		
+		return response;
+	}
+}

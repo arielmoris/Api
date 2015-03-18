@@ -1,0 +1,69 @@
+package pt.api.player.Update;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import pt.api.bean.ResponseWrapper;
+import pt.api.util.Configurator;
+import pt.api.util.Constants;
+import pt.api.util.HttpUtil;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+public abstract class Update {
+	
+	private static Logger logger = LoggerFactory.getLogger(Update.class);
+	
+	private static String uri = "/player/update/";
+	
+	public static final Response call(Request request) throws Exception{
+		logger.debug("Inside Update Call : {}", request.getPlayername());
+		uri = Configurator.getConfig("pt.baseurl")+uri;
+		Field[] fields = Request.class.getDeclaredFields();
+		StringBuilder sb = new StringBuilder(uri);
+		for(Field field : fields){
+			String name = field.getName();
+			String getterName =  "get"+ name.substring(0,1).toUpperCase() + name.substring(1);
+			
+			try {
+				Method method = Request.class.getMethod(getterName);
+				Object valueObject = method.invoke(request);
+				if(valueObject != null){
+					sb.append(name).append("/").append(valueObject);
+				}
+				System.out.println(name+" => "+valueObject);
+			} catch (NoSuchMethodException e) {
+				e.printStackTrace();
+			} catch (SecurityException e) {
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+			} catch (IllegalArgumentException e) {
+				e.printStackTrace();
+			} catch (InvocationTargetException e) {
+				e.printStackTrace();
+			}
+			
+		}
+		
+		Response response = new Response();
+		ResponseWrapper responseWrapper = HttpUtil.sendPost(uri);
+		if(responseWrapper.getCode() == Constants.ResponseCode.SUCCESS){
+			Gson gson = new GsonBuilder().create();
+			response = gson.fromJson(responseWrapper.getObj(), Response.class);
+		}else{
+			response.setErrorcode(Constants.ResponseCode.FAILED);
+			response.setError(responseWrapper.getMessage());
+		}
+		
+		logger.debug("Response : {} ", response);
+		logger.debug("Finished Update Call : {}", request.getPlayername());
+		return response;
+	}
+			
+}

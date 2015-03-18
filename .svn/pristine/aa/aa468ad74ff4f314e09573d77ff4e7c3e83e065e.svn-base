@@ -1,0 +1,25 @@
+package pt.api;
+
+import pt.api.player.balance.PlayerBalance;
+import pt.api.player.balance.PlayerBalanceRequest;
+import pt.api.player.balance.PlayerBalanceResponse;
+/**
+ * Tester
+ *
+ */
+public class App 
+{
+	
+    public static void main( String[] args ){
+    	
+    }
+    
+    public void playerBalance() throws Exception{
+    	String baseUrl="http://localhost:7070/";
+    	String entityKey="SDF80sdf";
+    	PlayerBalanceRequest request = new PlayerBalanceRequest();
+    	request.setPlayername("");
+    	PlayerBalanceResponse response = PlayerBalance.call(baseUrl, request, entityKey);
+    	response.getError();
+    }
+}

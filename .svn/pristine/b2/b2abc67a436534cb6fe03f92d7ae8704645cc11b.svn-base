@@ -1,0 +1,29 @@
+package pt.api.player.Update;
+
+import java.util.List;
+
+public class Response {
+	
+	private int errorcode;
+	private String error;
+	private List<Result> result;
+	public int getErrorcode() {
+		return errorcode;
+	}
+	public void setErrorcode(int errorcode) {
+		this.errorcode = errorcode;
+	}
+	public String getError() {
+		return error;
+	}
+	public void setError(String error) {
+		this.error = error;
+	}
+	public List<Result> getResult() {
+		return result;
+	}
+	public void setResult(List<Result> result) {
+		this.result = result;
+	}
+	
+}

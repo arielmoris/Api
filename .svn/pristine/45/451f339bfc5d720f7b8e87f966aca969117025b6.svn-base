@@ -1,0 +1,66 @@
+package pt.api.util;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import pt.api.bean.ResponseWrapper;
+
+public class HttpUtil {
+
+	static Logger logger = LoggerFactory.getLogger(HttpUtil.class);
+
+	public static ResponseWrapper sendPost(String url){
+
+		logger.debug("Sending post request to {}", url);
+
+		ResponseWrapper response = new ResponseWrapper();
+		int code = 0;
+		String message = "Success";
+		String obj = "";
+		HttpClient httpClient = HttpClientBuilder.create().build();
+		HttpPost post = new HttpPost(url);
+		try {
+			HttpResponse httpResponse = httpClient.execute(post);
+			obj = "";
+			if(httpResponse.getStatusLine().getStatusCode() == 200){
+				BufferedReader br = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent()));
+
+				StringBuffer strBuffer = new StringBuffer();
+				char[] cBuff = new char[1];
+
+				while((br.read(cBuff, 0, 1)) != -1){
+					strBuffer.append(cBuff[0]);
+				}
+				obj = strBuffer.toString();
+				if(obj == null || obj.equals("")){ 
+					code = Constants.ResponseCode.FAILED;
+					message = "No response.";
+				}
+			}else{
+				code	 = httpResponse.getStatusLine().getStatusCode();
+				message	 = httpResponse.getStatusLine().getReasonPhrase();
+			}
+		} catch (Exception e) {
+			logger.trace("Exception in httputil ", e);
+			code = Constants.ResponseCode.FAILED;
+			message = "Try again later.";
+		} finally{
+			post.releaseConnection();
+			httpClient.getConnectionManager().shutdown();
+		}
+		
+		response.setCode(code);
+		response.setMessage(message);
+		response.setObj(obj);
+		
+		logger.debug("Leaving sendPost (resp={})",response.toString());
+		return response;
+	}
+}

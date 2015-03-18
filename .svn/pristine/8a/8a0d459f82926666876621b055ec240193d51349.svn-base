@@ -1,0 +1,19 @@
+package pt.api.player.isplayeronline;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import pt.api.bean.MethodBase;
+
+public class IsPlayerOnline extends MethodBase{
+
+	private static String uri = "player/online/";
+	
+	public static final Response call(String baseUrl, Request request) throws Exception{
+		uri = baseUrl+uri;
+		uri = generateUri(request, uri);
+		Response response = new Response();
+		response = processSend(response, uri);
+		return response;
+	}	
+}

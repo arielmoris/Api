@@ -1,0 +1,29 @@
+package pt.api.player.list;
+
+import java.math.BigDecimal;
+
+public class Total {
+	private Integer TotalCount;
+	private BigDecimal TotalBalance;
+	private BigDecimal TotalBonusBalance;
+	public Integer getTotalCount() {
+		return TotalCount;
+	}
+	public void setTotalCount(Integer totalCount) {
+		TotalCount = totalCount;
+	}
+	public BigDecimal getTotalBalance() {
+		return TotalBalance;
+	}
+	public void setTotalBalance(BigDecimal totalBalance) {
+		TotalBalance = totalBalance;
+	}
+	public BigDecimal getTotalBonusBalance() {
+		return TotalBonusBalance;
+	}
+	public void setTotalBonusBalance(BigDecimal totalBonusBalance) {
+		TotalBonusBalance = totalBonusBalance;
+	} 
+	
+	
+}

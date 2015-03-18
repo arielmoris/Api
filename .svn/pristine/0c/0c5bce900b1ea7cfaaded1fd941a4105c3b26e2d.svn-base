@@ -1,0 +1,21 @@
+package pt.api.player.info;
+
+import pt.api.bean.ResponseBase;
+
+public class Response extends ResponseBase{
+	private Result result;
+
+	public Result getResult() {
+		return result;
+	}
+
+	public void setResult(Result result) {
+		this.result = result;
+	}
+
+	@Override
+	public String toString() {
+		return "Response [result=" + result + "]";
+	}
+	
+}
