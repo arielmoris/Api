@@ -1,0 +1,325 @@
+package pt.api.report.playersaccountstats;
+
+/**
+ * @author JavaDev004
+ *
+ */
+public class PlayersAccountStatsResult {
+	
+	private String PLAYERNAME;
+	private String KIOSKNAME;
+	private String ENTITYNAME;
+	private String TRANSFERS;
+	private String BALANCECHANGE;
+	private String OPBALANCE;
+	private String CPBALANCE;
+	private String PENDINGBALANCECHANGE;
+	private String DEPOSITS;
+	private String CHARGEBACKS;
+	private String CREDITS;
+	private String RETURNS;
+	private String CHARGEBACKREVERSES;
+	private String CREDITREVERSES;
+	private String RETURNREVERSES;
+	private String WITHDRAWS;
+	private String PLAYERPAIDWITHDRAWFEE;
+	private String PLAYERTRANSFERDEPOSITS;
+	private String PLAYERTRANSFERWITHDRAWS;
+	private String PGDEPOSITS;
+	private String BGDEPOSITS;
+	private String PGWITHDRAWS;
+	private String BGWITHDRAWS;
+	private String PROGRESSIVEREFUNDS;
+	private String DEPOSITCORRECTIONS;
+	private String WITHDRAWCORRECTIONS;
+	private String NETREVENUE;
+	private String POKERWONTOKENS;
+	private String POKERWONTOKENREVERSES;
+	private String GAMEPAYMENTSDEPOSITS;
+	private String GAMEPAYMENTSWITHDRAWS;
+	private String SPORTSBOOK;
+	private String TLEDEPOSITBALANCE;
+	private String CURRENCYCODE;
+	private String RNUM;
+	
+	
+	public PlayersAccountStatsResult() {
+		super();
+		PLAYERNAME = new String();
+		KIOSKNAME = new String();
+		ENTITYNAME = new String();
+		TRANSFERS = new String();
+		BALANCECHANGE = new String();
+		OPBALANCE = new String();
+		CPBALANCE = new String();
+		PENDINGBALANCECHANGE = new String();
+		DEPOSITS = new String();
+		CHARGEBACKS = new String();
+		CREDITS = new String();
+		RETURNS = new String();
+		CHARGEBACKREVERSES = new String();
+		CREDITREVERSES = new String();
+		RETURNREVERSES = new String();
+		WITHDRAWS = new String();
+		PLAYERPAIDWITHDRAWFEE = new String();
+		PLAYERTRANSFERDEPOSITS = new String();
+		PLAYERTRANSFERWITHDRAWS = new String();
+		PGDEPOSITS = new String();
+		BGDEPOSITS = new String();
+		PGWITHDRAWS = new String();
+		BGWITHDRAWS = new String();
+		PROGRESSIVEREFUNDS = new String();
+		DEPOSITCORRECTIONS = new String();
+		WITHDRAWCORRECTIONS = new String();
+		NETREVENUE = new String();
+		POKERWONTOKENS = new String();
+		POKERWONTOKENREVERSES = new String();
+		GAMEPAYMENTSDEPOSITS = new String();
+		GAMEPAYMENTSWITHDRAWS = new String();
+		SPORTSBOOK = new String();
+		TLEDEPOSITBALANCE = new String();
+		CURRENCYCODE = new String();
+		RNUM = new String();
+	}
+	
+	public String getPLAYERNAME() {
+		return PLAYERNAME;
+	}
+	public void setPLAYERNAME(String pLAYERNAME) {
+		PLAYERNAME = pLAYERNAME;
+	}
+	public String getKIOSKNAME() {
+		return KIOSKNAME;
+	}
+	public void setKIOSKNAME(String kIOSKNAME) {
+		KIOSKNAME = kIOSKNAME;
+	}
+	public String getENTITYNAME() {
+		return ENTITYNAME;
+	}
+	public void setENTITYNAME(String eNTITYNAME) {
+		ENTITYNAME = eNTITYNAME;
+	}
+	public String getTRANSFERS() {
+		return TRANSFERS;
+	}
+	public void setTRANSFERS(String tRANSFERS) {
+		TRANSFERS = tRANSFERS;
+	}
+	public String getBALANCECHANGE() {
+		return BALANCECHANGE;
+	}
+	public void setBALANCECHANGE(String bALANCECHANGE) {
+		BALANCECHANGE = bALANCECHANGE;
+	}
+	public String getOPBALANCE() {
+		return OPBALANCE;
+	}
+	public void setOPBALANCE(String oPBALANCE) {
+		OPBALANCE = oPBALANCE;
+	}
+	public String getCPBALANCE() {
+		return CPBALANCE;
+	}
+	public void setCPBALANCE(String cPBALANCE) {
+		CPBALANCE = cPBALANCE;
+	}
+	public String getPENDINGBALANCECHANGE() {
+		return PENDINGBALANCECHANGE;
+	}
+	public void setPENDINGBALANCECHANGE(String pENDINGBALANCECHANGE) {
+		PENDINGBALANCECHANGE = pENDINGBALANCECHANGE;
+	}
+	public String getDEPOSITS() {
+		return DEPOSITS;
+	}
+	public void setDEPOSITS(String dEPOSITS) {
+		DEPOSITS = dEPOSITS;
+	}
+	public String getCHARGEBACKS() {
+		return CHARGEBACKS;
+	}
+	public void setCHARGEBACKS(String cHARGEBACKS) {
+		CHARGEBACKS = cHARGEBACKS;
+	}
+	public String getCREDITS() {
+		return CREDITS;
+	}
+	public void setCREDITS(String cREDITS) {
+		CREDITS = cREDITS;
+	}
+	public String getRETURNS() {
+		return RETURNS;
+	}
+	public void setRETURNS(String rETURNS) {
+		RETURNS = rETURNS;
+	}
+	public String getCHARGEBACKREVERSES() {
+		return CHARGEBACKREVERSES;
+	}
+	public void setCHARGEBACKREVERSES(String cHARGEBACKREVERSES) {
+		CHARGEBACKREVERSES = cHARGEBACKREVERSES;
+	}
+	public String getCREDITREVERSES() {
+		return CREDITREVERSES;
+	}
+	public void setCREDITREVERSES(String cREDITREVERSES) {
+		CREDITREVERSES = cREDITREVERSES;
+	}
+	public String getRETURNREVERSES() {
+		return RETURNREVERSES;
+	}
+	public void setRETURNREVERSES(String rETURNREVERSES) {
+		RETURNREVERSES = rETURNREVERSES;
+	}
+	public String getWITHDRAWS() {
+		return WITHDRAWS;
+	}
+	public void setWITHDRAWS(String wITHDRAWS) {
+		WITHDRAWS = wITHDRAWS;
+	}
+	public String getPLAYERPAIDWITHDRAWFEE() {
+		return PLAYERPAIDWITHDRAWFEE;
+	}
+	public void setPLAYERPAIDWITHDRAWFEE(String pLAYERPAIDWITHDRAWFEE) {
+		PLAYERPAIDWITHDRAWFEE = pLAYERPAIDWITHDRAWFEE;
+	}
+	public String getPLAYERTRANSFERDEPOSITS() {
+		return PLAYERTRANSFERDEPOSITS;
+	}
+	public void setPLAYERTRANSFERDEPOSITS(String pLAYERTRANSFERDEPOSITS) {
+		PLAYERTRANSFERDEPOSITS = pLAYERTRANSFERDEPOSITS;
+	}
+	public String getPLAYERTRANSFERWITHDRAWS() {
+		return PLAYERTRANSFERWITHDRAWS;
+	}
+	public void setPLAYERTRANSFERWITHDRAWS(String pLAYERTRANSFERWITHDRAWS) {
+		PLAYERTRANSFERWITHDRAWS = pLAYERTRANSFERWITHDRAWS;
+	}
+	public String getPGDEPOSITS() {
+		return PGDEPOSITS;
+	}
+	public void setPGDEPOSITS(String pGDEPOSITS) {
+		PGDEPOSITS = pGDEPOSITS;
+	}
+	public String getBGDEPOSITS() {
+		return BGDEPOSITS;
+	}
+	public void setBGDEPOSITS(String bGDEPOSITS) {
+		BGDEPOSITS = bGDEPOSITS;
+	}
+	public String getPGWITHDRAWS() {
+		return PGWITHDRAWS;
+	}
+	public void setPGWITHDRAWS(String pGWITHDRAWS) {
+		PGWITHDRAWS = pGWITHDRAWS;
+	}
+	public String getBGWITHDRAWS() {
+		return BGWITHDRAWS;
+	}
+	public void setBGWITHDRAWS(String bGWITHDRAWS) {
+		BGWITHDRAWS = bGWITHDRAWS;
+	}
+	public String getPROGRESSIVEREFUNDS() {
+		return PROGRESSIVEREFUNDS;
+	}
+	public void setPROGRESSIVEREFUNDS(String pROGRESSIVEREFUNDS) {
+		PROGRESSIVEREFUNDS = pROGRESSIVEREFUNDS;
+	}
+	public String getDEPOSITCORRECTIONS() {
+		return DEPOSITCORRECTIONS;
+	}
+	public void setDEPOSITCORRECTIONS(String dEPOSITCORRECTIONS) {
+		DEPOSITCORRECTIONS = dEPOSITCORRECTIONS;
+	}
+	public String getWITHDRAWCORRECTIONS() {
+		return WITHDRAWCORRECTIONS;
+	}
+	public void setWITHDRAWCORRECTIONS(String wITHDRAWCORRECTIONS) {
+		WITHDRAWCORRECTIONS = wITHDRAWCORRECTIONS;
+	}
+	public String getNETREVENUE() {
+		return NETREVENUE;
+	}
+	public void setNETREVENUE(String nETREVENUE) {
+		NETREVENUE = nETREVENUE;
+	}
+	public String getPOKERWONTOKENS() {
+		return POKERWONTOKENS;
+	}
+	public void setPOKERWONTOKENS(String pOKERWONTOKENS) {
+		POKERWONTOKENS = pOKERWONTOKENS;
+	}
+	public String getPOKERWONTOKENREVERSES() {
+		return POKERWONTOKENREVERSES;
+	}
+	public void setPOKERWONTOKENREVERSES(String pOKERWONTOKENREVERSES) {
+		POKERWONTOKENREVERSES = pOKERWONTOKENREVERSES;
+	}
+	public String getGAMEPAYMENTSDEPOSITS() {
+		return GAMEPAYMENTSDEPOSITS;
+	}
+	public void setGAMEPAYMENTSDEPOSITS(String gAMEPAYMENTSDEPOSITS) {
+		GAMEPAYMENTSDEPOSITS = gAMEPAYMENTSDEPOSITS;
+	}
+	public String getGAMEPAYMENTSWITHDRAWS() {
+		return GAMEPAYMENTSWITHDRAWS;
+	}
+	public void setGAMEPAYMENTSWITHDRAWS(String gAMEPAYMENTSWITHDRAWS) {
+		GAMEPAYMENTSWITHDRAWS = gAMEPAYMENTSWITHDRAWS;
+	}
+	public String getSPORTSBOOK() {
+		return SPORTSBOOK;
+	}
+	public void setSPORTSBOOK(String sPORTSBOOK) {
+		SPORTSBOOK = sPORTSBOOK;
+	}
+	public String getTLEDEPOSITBALANCE() {
+		return TLEDEPOSITBALANCE;
+	}
+	public void setTLEDEPOSITBALANCE(String tLEDEPOSITBALANCE) {
+		TLEDEPOSITBALANCE = tLEDEPOSITBALANCE;
+	}
+	public String getCURRENCYCODE() {
+		return CURRENCYCODE;
+	}
+	public void setCURRENCYCODE(String cURRENCYCODE) {
+		CURRENCYCODE = cURRENCYCODE;
+	}
+	public String getRNUM() {
+		return RNUM;
+	}
+	public void setRNUM(String rNUM) {
+		RNUM = rNUM;
+	}
+
+	@Override
+	public String toString() {
+		return "PlayersAccountStatsResult [PLAYERNAME=" + PLAYERNAME
+				+ ", KIOSKNAME=" + KIOSKNAME + ", ENTITYNAME=" + ENTITYNAME
+				+ ", TRANSFERS=" + TRANSFERS + ", BALANCECHANGE="
+				+ BALANCECHANGE + ", OPBALANCE=" + OPBALANCE + ", CPBALANCE="
+				+ CPBALANCE + ", PENDINGBALANCECHANGE=" + PENDINGBALANCECHANGE
+				+ ", DEPOSITS=" + DEPOSITS + ", CHARGEBACKS=" + CHARGEBACKS
+				+ ", CREDITS=" + CREDITS + ", RETURNS=" + RETURNS
+				+ ", CHARGEBACKREVERSES=" + CHARGEBACKREVERSES
+				+ ", CREDITREVERSES=" + CREDITREVERSES + ", RETURNREVERSES="
+				+ RETURNREVERSES + ", WITHDRAWS=" + WITHDRAWS
+				+ ", PLAYERPAIDWITHDRAWFEE=" + PLAYERPAIDWITHDRAWFEE
+				+ ", PLAYERTRANSFERDEPOSITS=" + PLAYERTRANSFERDEPOSITS
+				+ ", PLAYERTRANSFERWITHDRAWS=" + PLAYERTRANSFERWITHDRAWS
+				+ ", PGDEPOSITS=" + PGDEPOSITS + ", BGDEPOSITS=" + BGDEPOSITS
+				+ ", PGWITHDRAWS=" + PGWITHDRAWS + ", BGWITHDRAWS="
+				+ BGWITHDRAWS + ", PROGRESSIVEREFUNDS=" + PROGRESSIVEREFUNDS
+				+ ", DEPOSITCORRECTIONS=" + DEPOSITCORRECTIONS
+				+ ", WITHDRAWCORRECTIONS=" + WITHDRAWCORRECTIONS
+				+ ", NETREVENUE=" + NETREVENUE + ", POKERWONTOKENS="
+				+ POKERWONTOKENS + ", POKERWONTOKENREVERSES="
+				+ POKERWONTOKENREVERSES + ", GAMEPAYMENTSDEPOSITS="
+				+ GAMEPAYMENTSDEPOSITS + ", GAMEPAYMENTSWITHDRAWS="
+				+ GAMEPAYMENTSWITHDRAWS + ", SPORTSBOOK=" + SPORTSBOOK
+				+ ", TLEDEPOSITBALANCE=" + TLEDEPOSITBALANCE
+				+ ", CURRENCYCODE=" + CURRENCYCODE + ", RNUM=" + RNUM + "]";
+	}
+	
+}

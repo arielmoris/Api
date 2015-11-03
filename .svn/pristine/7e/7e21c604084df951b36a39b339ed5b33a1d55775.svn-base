@@ -1,0 +1,87 @@
+package pt.api.player.masswithdraw;
+
+import java.util.Date;
+
+public class PlayerMassWithdrawWithdraw {
+	private String result;
+	private Integer amount;
+	private Date kiosktransactiontime;
+	private Integer kiosktransactionid;
+	private Integer ptinternaltransactionid;
+	private String instantcashtype;
+	private Date executiontime;
+	private Integer currentplayerbalance;
+	private String error;
+	private String errorcode;
+	public String getResult() {
+		return result;
+	}
+	public void setResult(String result) {
+		this.result = result;
+	}
+	public Integer getAmount() {
+		return amount;
+	}
+	public void setAmount(Integer amount) {
+		this.amount = amount;
+	}
+	public Date getKiosktransactiontime() {
+		return kiosktransactiontime;
+	}
+	public void setKiosktransactiontime(Date kiosktransactiontime) {
+		this.kiosktransactiontime = kiosktransactiontime;
+	}
+	public Integer getKiosktransactionid() {
+		return kiosktransactionid;
+	}
+	public void setKiosktransactionid(Integer kiosktransactionid) {
+		this.kiosktransactionid = kiosktransactionid;
+	}
+	public Integer getPtinternaltransactionid() {
+		return ptinternaltransactionid;
+	}
+	public void setPtinternaltransactionid(Integer ptinternaltransactionid) {
+		this.ptinternaltransactionid = ptinternaltransactionid;
+	}
+	public String getInstantcashtype() {
+		return instantcashtype;
+	}
+	public void setInstantcashtype(String instantcashtype) {
+		this.instantcashtype = instantcashtype;
+	}
+	public Date getExecutiontime() {
+		return executiontime;
+	}
+	public void setExecutiontime(Date executiontime) {
+		this.executiontime = executiontime;
+	}
+	public Integer getCurrentplayerbalance() {
+		return currentplayerbalance;
+	}
+	public void setCurrentplayerbalance(Integer currentplayerbalance) {
+		this.currentplayerbalance = currentplayerbalance;
+	}
+	public String getError() {
+		return error;
+	}
+	public void setError(String error) {
+		this.error = error;
+	}
+	public String getErrorcode() {
+		return errorcode;
+	}
+	public void setErrorcode(String errorcode) {
+		this.errorcode = errorcode;
+	}
+	@Override
+	public String toString() {
+		return "PlayerMassWithdrawWithdraw [result=" + result + ", amount="
+				+ amount + ", kiosktransactiontime=" + kiosktransactiontime
+				+ ", kiosktransactionid=" + kiosktransactionid
+				+ ", ptinternaltransactionid=" + ptinternaltransactionid
+				+ ", instantcashtype=" + instantcashtype + ", executiontime="
+				+ executiontime + ", currentplayerbalance="
+				+ currentplayerbalance + ", error=" + error + ", errorcode="
+				+ errorcode + "]";
+	}
+}

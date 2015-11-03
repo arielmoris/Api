@@ -1,0 +1,20 @@
+package pt.api.player.create;
+
+
+import pt.api.bean.MethodBase;
+
+public class PlayerCreate extends MethodBase {
+
+	private static String uri = "player/create/";
+	
+	public static final PlayerCreateResponse call(String baseUrl, PlayerCreateRequest request, String entityKey) throws Exception{
+	
+		uri = baseUrl+uri;
+		uri = generateUri(request, uri);
+		
+		PlayerCreateResponse response = new PlayerCreateResponse();
+		response = processSend(response, uri, entityKey);
+		
+		return response;
+	}
+}

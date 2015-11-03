@@ -1,0 +1,18 @@
+package pt.api.entity.generatekey;
+
+import pt.api.bean.MethodBase;
+
+public class GenerateKey extends MethodBase{
+	private static String uri = "entity/generatekey/";
+	
+	public static final GenerateKeyResponse call(String baseUrl, GenerateKeyRequest request, String entityKey) throws Exception{
+		
+		uri = baseUrl+uri;
+		uri = generateUri(request, uri);
+		
+		GenerateKeyResponse response = new GenerateKeyResponse();
+		response = processSend(response, uri, entityKey);
+		
+		return response;
+	}
+}

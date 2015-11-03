@@ -1,0 +1,19 @@
+package pt.api.player.massdeposit;
+
+import pt.api.bean.MethodBase;
+
+
+public class PlayerMassDeposit extends MethodBase{
+	private static String uri = "player/massDeposit/";
+	
+	public static final PlayerMassDepositResponse call(String baseUrl, PlayerMassDepositRequest request, String entityKey) throws Exception{
+		uri = baseUrl+uri;
+		uri = generateUri(request, uri);
+		
+		PlayerMassDepositResponse response = new PlayerMassDepositResponse();
+		response = processSend(response, uri, entityKey);
+		
+		return response;
+	}
+	
+}

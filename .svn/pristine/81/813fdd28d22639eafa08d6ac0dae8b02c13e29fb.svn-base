@@ -1,0 +1,296 @@
+package pt.api.report.gamestats;
+
+public class GameStatsResult {
+	private String GAME;
+	private String GAMETYPE;
+	
+	private String VIP_LEVEL;
+	
+	private String KIOSKNAME;
+	
+	private String PLAYERNAME;
+	private String FULLNAME;
+	private String VIPLEVEL;
+	private String COUNTRY;
+	
+	private String CLIENTPLATFORM;
+	
+	private String DAILY;
+	private String MONTHLY;
+	private Integer PLAYERS;
+	private Integer GAMES;
+	private String CURRENCYCODE;
+	
+	private Integer REALMONEYBETS;
+	private Integer REALMONEYWINS;
+	private Integer BETS;
+	private Integer WINS;
+	private Integer INCOME;
+	private Integer JACKPOTBETS;
+	private Integer JACKPORTWINS;
+	private Integer TOTALLIVEGAMETIPS;
+	private Integer RNUM;
+	
+	public GameStatsResult() {
+		super();
+		PLAYERS = new Integer(0);
+		GAMES = new Integer(0);
+		REALMONEYBETS = new Integer(0);
+		REALMONEYWINS = new Integer(0);
+		BETS = new Integer(0);
+		WINS = new Integer(0);
+		INCOME = new Integer(0);
+		JACKPOTBETS = new Integer(0);
+		JACKPORTWINS = new Integer(0);
+		TOTALLIVEGAMETIPS = new Integer(0);
+		RNUM = new Integer(0);
+	}
+
+
+	public String getGAME() {
+		return GAME;
+	}
+
+
+	public void setGAME(String gAME) {
+		GAME = gAME;
+	}
+
+
+	public String getGAMETYPE() {
+		return GAMETYPE;
+	}
+
+
+	public void setGAMETYPE(String gAMETYPE) {
+		GAMETYPE = gAMETYPE;
+	}
+
+
+	public String getVIP_LEVEL() {
+		return VIP_LEVEL;
+	}
+
+
+	public void setVIP_LEVEL(String vIP_LEVEL) {
+		VIP_LEVEL = vIP_LEVEL;
+	}
+
+
+	public String getKIOSKNAME() {
+		return KIOSKNAME;
+	}
+
+
+	public void setKIOSKNAME(String kIOSKNAME) {
+		KIOSKNAME = kIOSKNAME;
+	}
+
+
+	public String getPLAYERNAME() {
+		return PLAYERNAME;
+	}
+
+
+	public void setPLAYERNAME(String pLAYERNAME) {
+		PLAYERNAME = pLAYERNAME;
+	}
+
+
+	public String getFULLNAME() {
+		return FULLNAME;
+	}
+
+
+	public void setFULLNAME(String fULLNAME) {
+		FULLNAME = fULLNAME;
+	}
+
+
+	public String getVIPLEVEL() {
+		return VIPLEVEL;
+	}
+
+
+	public void setVIPLEVEL(String vIPLEVEL) {
+		VIPLEVEL = vIPLEVEL;
+	}
+
+
+	public String getCOUNTRY() {
+		return COUNTRY;
+	}
+
+
+	public void setCOUNTRY(String cOUNTRY) {
+		COUNTRY = cOUNTRY;
+	}
+
+
+	public String getCLIENTPLATFORM() {
+		return CLIENTPLATFORM;
+	}
+
+
+	public void setCLIENTPLATFORM(String cLIENTPLATFORM) {
+		CLIENTPLATFORM = cLIENTPLATFORM;
+	}
+
+
+	public String getDAILY() {
+		return DAILY;
+	}
+
+
+	public void setDAILY(String dAILY) {
+		DAILY = dAILY;
+	}
+	
+	
+	public String getMONTHLY() {
+		return MONTHLY;
+	}
+
+
+	public void setMONTHLY(String mONTHLY) {
+		MONTHLY = mONTHLY;
+	}
+
+
+	public Integer getPLAYERS() {
+		return PLAYERS;
+	}
+
+
+	public void setPLAYERS(Integer pLAYERS) {
+		PLAYERS = pLAYERS;
+	}
+
+
+	public Integer getGAMES() {
+		return GAMES;
+	}
+
+
+	public void setGAMES(Integer gAMES) {
+		GAMES = gAMES;
+	}
+
+
+	public String getCURRENCYCODE() {
+		return CURRENCYCODE;
+	}
+
+
+	public void setCURRENCYCODE(String cURRENCYCODE) {
+		CURRENCYCODE = cURRENCYCODE;
+	}
+
+
+	public Integer getREALMONEYBETS() {
+		return REALMONEYBETS;
+	}
+
+
+	public void setREALMONEYBETS(Integer rEALMONEYBETS) {
+		REALMONEYBETS = rEALMONEYBETS;
+	}
+
+
+	public Integer getREALMONEYWINS() {
+		return REALMONEYWINS;
+	}
+
+
+	public void setREALMONEYWINS(Integer rEALMONEYWINS) {
+		REALMONEYWINS = rEALMONEYWINS;
+	}
+
+
+	public Integer getBETS() {
+		return BETS;
+	}
+
+
+	public void setBETS(Integer bETS) {
+		BETS = bETS;
+	}
+
+
+	public Integer getWINS() {
+		return WINS;
+	}
+
+
+	public void setWINS(Integer wINS) {
+		WINS = wINS;
+	}
+
+
+	public Integer getINCOME() {
+		return INCOME;
+	}
+
+
+	public void setINCOME(Integer iNCOME) {
+		INCOME = iNCOME;
+	}
+
+
+	public Integer getJACKPOTBETS() {
+		return JACKPOTBETS;
+	}
+
+
+	public void setJACKPOTBETS(Integer jACKPOTBETS) {
+		JACKPOTBETS = jACKPOTBETS;
+	}
+
+
+	public Integer getJACKPORTWINS() {
+		return JACKPORTWINS;
+	}
+
+
+	public void setJACKPORTWINS(Integer jACKPORTWINS) {
+		JACKPORTWINS = jACKPORTWINS;
+	}
+
+
+	public Integer getTOTALLIVEGAMETIPS() {
+		return TOTALLIVEGAMETIPS;
+	}
+
+
+	public void setTOTALLIVEGAMETIPS(Integer tOTALLIVEGAMETIPS) {
+		TOTALLIVEGAMETIPS = tOTALLIVEGAMETIPS;
+	}
+
+
+	public Integer getRNUM() {
+		return RNUM;
+	}
+	public void setRNUM(Integer rNUM) {
+		RNUM = rNUM;
+	}
+
+
+	@Override
+	public String toString() {
+		return "GameStatsResult [GAME=" + GAME + ", GAMETYPE=" + GAMETYPE
+				+ ", VIP_LEVEL=" + VIP_LEVEL + ", KIOSKNAME=" + KIOSKNAME
+				+ ", PLAYERNAME=" + PLAYERNAME + ", FULLNAME=" + FULLNAME
+				+ ", VIPLEVEL=" + VIPLEVEL + ", COUNTRY=" + COUNTRY
+				+ ", CLIENTPLATFORM=" + CLIENTPLATFORM + ", DAILY=" + DAILY
+				+ ", PLAYERS=" + PLAYERS + ", GAMES=" + GAMES
+				+ ", CURRENCYCODE=" + CURRENCYCODE + ", REALMONEYBETS="
+				+ REALMONEYBETS + ", REALMONEYWINS=" + REALMONEYWINS
+				+ ", BETS=" + BETS + ", WINS=" + WINS + ", INCOME=" + INCOME
+				+ ", JACKPOTBETS=" + JACKPOTBETS + ", JACKPORTWINS="
+				+ JACKPORTWINS + ", TOTALLIVEGAMETIPS=" + TOTALLIVEGAMETIPS
+				+ ", RNUM=" + RNUM + "]";
+	}
+	
+	
+	
+}

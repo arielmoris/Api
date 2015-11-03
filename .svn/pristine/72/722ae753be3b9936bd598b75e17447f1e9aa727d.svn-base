@@ -1,0 +1,18 @@
+package pt.api.player.massupdate;
+
+import pt.api.bean.MethodBase;
+
+
+public class PlayerMassUpdate  extends MethodBase{
+	private static String uri = "player/massUpdate/";
+	
+	public static final PlayerMassUpdateResponse call(String baseUrl, PlayerMassUpdateRequest request, String entityKey) throws Exception{
+		uri = baseUrl+uri;
+		uri = generateUri(request, uri);
+		
+		PlayerMassUpdateResponse response = new PlayerMassUpdateResponse();
+		response = processSend(response, uri, entityKey);
+		
+		return response;
+	}
+}

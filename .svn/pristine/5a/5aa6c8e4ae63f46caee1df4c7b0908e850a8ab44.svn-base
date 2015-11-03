@@ -1,0 +1,25 @@
+package pt.api.player.massdeposit;
+
+import java.util.List;
+
+import pt.api.bean.ResponseBase;
+
+public class PlayerMassDepositResponse extends ResponseBase{
+	
+	private List<PlayerMassDepositResult> result;
+
+	public List<PlayerMassDepositResult> getResult() {
+		return result;
+	}
+
+	public void setResult(List<PlayerMassDepositResult> result) {
+		this.result = result;
+	}
+
+	@Override
+	public String toString() {
+		return "PlayerMassDepositResponse [result=" + result + "]";
+	}
+	
+	
+}

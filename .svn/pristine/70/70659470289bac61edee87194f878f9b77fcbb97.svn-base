@@ -1,0 +1,17 @@
+package pt.api.player.masslogout;
+
+import pt.api.bean.MethodBase;
+
+public class PlayerMassLogout extends MethodBase{
+	private static String uri = "player/masslogout";
+	
+	public static final PlayerMassLogoutResponse call(String baseUrl, PlayerMassLogoutRequest request, String entityKey) throws Exception{
+		uri = baseUrl+uri;
+		uri = generateUri(request, uri);
+		
+		PlayerMassLogoutResponse response = new PlayerMassLogoutResponse();
+		response = processSend(response, uri, entityKey);
+		
+		return response;
+	}
+}
