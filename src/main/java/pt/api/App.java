@@ -127,15 +127,7 @@ public class App
 {
 	
     public static void main( String[] args ){
-    	String amount = "10000.502131";
-    	
-    	DecimalFormat format = new DecimalFormat("#.00");
-		
-		System.out.println(format.format(new Double(amount)));
-    	try {
-//    		String curdir = System.getProperty("catalina.base");
-//    		System.out.println(curdir);
-    		
+    	try { 		
 //			playerBalance();
 //			checkTransaction();
 //			playerCreate();
@@ -157,6 +149,7 @@ public class App
 			
 //    		generateKey();
 			
+    		/****** REPORTS ******/
 //			gamestats();
 //			playergames();
 //			playergamescount();
